@@ -116,7 +116,7 @@ form>div {
     flex-direction: column;
     padding: var(--gap);
     margin-bottom: calc(var(--gap)*1.5);
-    
+    box-shadow: 0 5px 5px rgb(0,0,0,0.3);
 }
 
 form legend {
