@@ -7,26 +7,26 @@
     font-style: normal;
     font-display: swap;
 }
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+
 :root {
     --main-color: #A9B7C9;
     --secondary-color: #627084;
     --font-color: white;
+    --button-color: #3a4e61;
     --gap: 30px;
+    --font-size: 2rem;
 }
 
 body {
-    background-color: #F2F4F7;
+    background-color: var(--secondary-color);
     margin: 0;
-    overflow: hidden;
-
     display: flex;
+    font-family: sans-serif;
 }
 
-#odin p {
-    font-family: Nord, sans-serif;
-    font-size: 6rem;
-    margin: 0;
-}
 
 a {
     color: var(--font-color);
@@ -34,7 +34,6 @@ a {
 }
 
 .image-container {
-    /* width: fit-content; */
     position: relative;
 }
 .background {
@@ -49,6 +48,12 @@ a {
     color: white;
 
 }
+#odin p {
+    font-family: Nord, sans-serif;
+    font-size: 6rem;
+    margin: 0;
+}
+
 #photo-credit {
     bottom: 1em;
     backdrop-filter: blur(10px);
@@ -57,15 +62,13 @@ a {
     left: 50%;
     transform: translateX(-50%);
 }
-#odin {
+div#odin {
     display: flex;
     justify-content: center;
     align-items: center;
     top: 10%;
     font-size: 3rem;
     background-color: rgba(0,0,0,0.6);
-    
-    
 }
 
 #odin img {
@@ -74,35 +77,87 @@ a {
 
 img.background {
     height: 100vh;
-    /* object-fit: fill; */
+    display: block;
 }
 
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center;     */
-    
+    flex: 1;
     background-color: var(--secondary-color);
-    /* width: 100vw; */
+    font-size: var(--font-size);
+    row-gap: var(--gap);
 }
 
+.quote {
+    margin-bottom: var(--padding);
+    font-weight: bold;
+    margin-right: 20vw;
+}
 
 .quote,
-form div,
 .form-container>p {
     padding-left: var(--gap);
+}
+.form-container p a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
 form button {
     margin-left: var(--gap);
 }
 
-form div {
+form>div {
     background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    padding: var(--gap);
+    margin-bottom: var(--gap);
+    
+}
+
+form legend {
+    display: block;
+    width: 100%;
+}
+
+form input {
+    font-size: 1.5rem;
+}
+
+form p label {
+    display: block;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
 }
 
 
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.row p {
+    margin: 16px 0;
+}
+
 button {
-    background-color: #3a4e61;
+    background-color: var(--button-color);
+    padding: 1em 1.5em;
+    font-size: 2rem;
+    border: none;
+    border-radius: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--main-color);
 }
