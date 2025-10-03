@@ -1,0 +1,108 @@
+@font-face {
+    font-family: Nord;
+    src: 
+        url("fonts/Norse-Bold.woff2") format("woff2"),
+        url("fonts/Norse-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+:root {
+    --main-color: #A9B7C9;
+    --secondary-color: #627084;
+    --font-color: white;
+    --gap: 30px;
+}
+
+body {
+    background-color: #F2F4F7;
+    margin: 0;
+    overflow: hidden;
+
+    display: flex;
+}
+
+#odin p {
+    font-family: Nord, sans-serif;
+    font-size: 6rem;
+    margin: 0;
+}
+
+a {
+    color: var(--font-color);
+    font-style: bold;
+}
+
+.image-container {
+    /* width: fit-content; */
+    position: relative;
+}
+.background {
+    height: 100%;
+}
+
+#photo-credit,
+#odin {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: white;
+
+}
+#photo-credit {
+    bottom: 1em;
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#odin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10%;
+    font-size: 3rem;
+    background-color: rgba(0,0,0,0.6);
+    
+    
+}
+
+#odin img {
+    height: 150px;
+}
+
+img.background {
+    height: 100vh;
+    /* object-fit: fill; */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center;     */
+    
+    background-color: var(--secondary-color);
+    /* width: 100vw; */
+}
+
+
+.quote,
+form div,
+.form-container>p {
+    padding-left: var(--gap);
+}
+
+form button {
+    margin-left: var(--gap);
+}
+
+form div {
+    background-color: var(--main-color);
+}
+
+
+button {
+    background-color: #3a4e61;
+}
