@@ -24,7 +24,7 @@
     <main>
         <div class="quote">
             <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-            <p>You <em>know</em> you want to. Nothing will happen tho.</p>
+            <p>You <em>know</em> you want to. Nothing will happen though.</p>
         </div>
         <div class="form-container">
             <form>
@@ -33,31 +33,33 @@
                     <div class="row">
                         <p>
                             <label for="name">first name</label>
-                            <input type="text" id="name">
+                            <input type="text" id="name" placeholder="Arthur">
                         </p>
                         <p>
                             <label for="surname">last name</label>
-                            <input type="text" id="surname">
+                            <input type="text" id="surname" placeholder="Pendragon">
                         </p>
                     </div>
                     <div class="row">
                         <p>
                             <label for="email">Email</label>
-                            <input type="text" id="email">
+                            <input type="email" id="email" placeholder="your@email.com">
                         </p>
                         <p>
                             <label for="phone">Phone Number</label>
-                            <input type="text" id="phone">
+                            <input type="tel" id="phone" pattern="[0-9]{9}" placeholder="111222333">
                         </p>
                     </div>
                     <div class="row">
                         <p>
                             <label for="pwd">Password</label>
-                            <input type="text" id="pwd">
+                            <input type="password" id="pwd" pattern="\w{8,32}"
+                            title="Please enter a password between 8-32 characters" required>
                         </p>
                         <p>
                             <label for="pwd-confirm">Confirm Password</label>
-                            <input type="text" id="pwd-confirm">
+                            <input type="password" id="pwd-confirm" pattern="\w{8,32}"
+                            title="Please enter a password between 8-32 characters" required>
                         </p>
                     </div>
                 </div>

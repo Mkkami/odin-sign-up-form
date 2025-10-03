@@ -17,7 +17,7 @@
     --font-color: white;
     --button-color: #3a4e61;
     --gap: 30px;
-    --font-size: 2rem;
+    --font-size: 1.5rem;
 }
 
 body {
@@ -115,7 +115,7 @@ form>div {
     display: flex;
     flex-direction: column;
     padding: var(--gap);
-    margin-bottom: var(--gap);
+    margin-bottom: calc(var(--gap)*1.5);
     
 }
 
@@ -125,7 +125,23 @@ form legend {
 }
 
 form input {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    padding: 0.5em;
+    width: 32ch;
+    border-radius: 4px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+form input:invalid {
+    border: 1px solid red;
+}
+
+form input:focus {
+    /* outline: 1px solid var(--button-color); */
+    border: 1px solid transparent;
+    outline: 1px solid #329cff;
+    outline-offset: 1px;
 }
 
 form p label {
@@ -133,10 +149,8 @@ form p label {
     font-family: 'Montserrat';
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
-
-
 
 .row {
     display: flex;
@@ -151,7 +165,7 @@ form p label {
 button {
     background-color: var(--button-color);
     padding: 1em 1.5em;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: none;
     border-radius: 16px;
     font-weight: bold;
